@@ -1,0 +1,300 @@
+/* Start Of Fonts */
+@font-face {
+    font-family: Main;
+    src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Main;
+    background-color: #0d1117;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* End Of Fonts */
+
+/* Start Of Nav */
+#logoImg {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.dark-nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.toggle-switch {
+    width: 55px;
+    height: 28px;
+    background: #555;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.toggle-circle {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+    position: relative;
+    left: 0;
+}
+
+.light-mode .toggle-switch {
+    background: #ddd;
+}
+
+.light-mode .toggle-circle {
+    left: 27px;
+    background: #333;
+}
+
+/* Light Mood ----*/
+.light-mode {
+    background-color: #f4f4f4 !important;
+    color: #222 !important;
+}
+
+.light-mode .dark-nav {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #ddd;
+}
+
+.light-mode #modeToggle {
+    border-color: #222;
+    color: #222;
+}
+
+/* End Of Nav */
+
+/* Search */
+.search-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.search-wrapper input {
+    padding: 12px 45px 12px 15px;
+    /* مسافة كافية للزرار على اليمين */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    font-family: Main;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.search-wrapper input::placeholder {
+    color: #aaa;
+}
+
+/* زرار جوه input */
+#searchBtn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+#searchBtn:hover {
+    color: #00aaff;
+}
+
+/* Light Mode */
+.light-mode .search-wrapper input {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #222;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.light-mode #searchBtn {
+    color: #222;
+}
+
+.light-mode #searchBtn:hover {
+    color: #0077cc;
+}
+
+
+/* Main Section */
+/* Today Section Condition Image */
+#todayConditionImg {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Tomorrow & After Tomorrow Icons */
+.next-condition-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Footer Icons (humidity, wind, compass) */
+.footer-icons {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.special {
+    margin-bottom:45px !important;
+    margin-top:5px !important;
+}
+
+.item {
+    padding: 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+#todayDate,
+.bg-main-color {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+}
+
+.item-footer {
+    background: rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Light Mood */
+.light-mode .item {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.light-mode #todayDate,
+.light-mode .bg-main-color {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .item-footer {
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.light-mode p,
+.light-mode h3,
+.light-mode h5,
+.light-mode span {
+    color: #222 !important;
+}
+
+.light-mode .text-light-blue {
+    color: #0a68c4 !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Footer */
+.main-footer {
+    background: rgba(255, 255, 255, 0.05);
+    /* Dark Mode */
+    backdrop-filter: blur(6px);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Main;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    /* يمنع Footer من الانكماش */
+}
+
+/* Light Mode */
+.light-mode .main-footer {
+    background: rgba(0, 0, 0, 0.05);
+    color: #222;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* لتوسيط Search والسكاشن */
+    width: 100%;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 70%;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+#searchBtn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+}
