@@ -77,7 +77,7 @@ function displayNextData(data) {
 
 async function weatherApp(city = "Kafr Ash Shaykh") {
     let weatherData = await getWeatherData(city);
-    if(!weatherData.error) {
+    if (!weatherData.error) {
         displayTodayData(weatherData);
         displayNextData(weatherData);
     }
